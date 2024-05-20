@@ -5,14 +5,21 @@ import "../styles/PhotoListItem.scss";
 
 const PhotoListItem = (props) => {
 
-  const { id, location, imageSource, username, profile } = props;
-
   return (
-    <li key={id}>
-      <img src={imageSource} />
-      <img src={profile} />
-      <p>{username}</p>
-      <p>{location.city}, {location.country}</p>
+    <li className="photo-list" key={props.listItem.id}>
+      <div className="photo-list__item">
+        <img className="photo-list__image" src={props.listItem.imageSource}></img>
+        <div className="photo-list__user-details">
+          <img className="photo-list__user-profile" src={props.listItem.profile}></img>
+          <div className="photo-list__user-info">
+            <span>{props.listItem.username}</span>
+            <div className="photo-list__user-location">
+              <span>{props.listItem.location.city}</span>
+              <span>{props.listItem.location.country}</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </li>
   );
 };
