@@ -13,12 +13,14 @@ function PhotoFavButton(props) {
     setLike(prevLike => !prevLike);
   };
 
-  //change icon style if fav state= true
-  const favIconClass = like ? "photo-list__fav-icon-svg" : "photo-list__fav-icon";
+  // //change icon style if fav state= true
+  // const favIconClass = like ? "photo-list__fav-icon-svg" : "photo-list__fav-icon";
 
   return (
-    <div className={favIconClass} onClick={handleClick}>
-      <FavIcon />
+    <div className={"photo-list__fav-icon"} onClick={handleClick}>
+      <div className={"photo-list__fav-icon-svg"}>
+      <FavIcon selected={like}/>
+      </div>
     </div>
   );
 }
