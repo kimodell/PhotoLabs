@@ -8,10 +8,9 @@ function PhotoFavButton(props) {
   //set inital state to unclicked icon
   const [like, setLike] = useState(false);
   
-  //set state to the opposite of the state like is currently at when clicked
+  //set state to the opposite of the previous state
   const handleClick = () => {
-    setLike(!like);
-    console.log("the photo is liked!");
+    setLike(prevLike => !prevLike);
   };
 
   //change icon style if fav state= true
