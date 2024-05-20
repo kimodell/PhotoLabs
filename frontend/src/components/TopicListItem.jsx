@@ -7,11 +7,14 @@ const sampleDataForTopicListItem = {
   slug: "topic-1",
   label: "Nature",
 };
+//component to display topic item
+const TopicListItem = (props) => {
+  
+  const { topic } = props
 
-const TopicListItem = () => {
   return (
     <div className="topic-list__item">
-      {/* Insert React */}
+      <span> {props.label} </span>
     </div>
   );
 };
