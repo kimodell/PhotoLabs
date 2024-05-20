@@ -9,8 +9,6 @@ const sampleDataForTopicListItem = {
 };
 //component to display topic item
 const TopicListItem = (props) => {
-  
-  const { topic } = props
 
   return (
     <div className="topic-list__item">
