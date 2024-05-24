@@ -29,6 +29,7 @@ const HomeRoute = (props) => {
       toggleLike={toggleLike}
       modalOpen = {props.modalOpen}
       setModalOpen= {props.setModalOpen}
+      toggleModal={props.toggleModal}
        />
     </div>
   );
