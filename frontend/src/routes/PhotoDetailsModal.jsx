@@ -3,11 +3,13 @@ import React from 'react';
 import '../styles/PhotoDetailsModal.scss'
 import closeSymbol from '../assets/closeSymbol.svg';
 
+//compoenent to render modal when specified photo is clicked
+
 const PhotoDetailsModal = (props) => {
 
-  const { toggleModal, photos } = props
+  const { toggleModal, selectPhoto } = props
 
-  photos.forEach(photo => console.log(photo))
+  console.log(selectPhoto)
 
   return (
     <div className="photo-details-modal">
