@@ -30,6 +30,7 @@ const HomeRoute = (props) => {
       modalOpen = {props.modalOpen}
       setModalOpen= {props.setModalOpen}
       toggleModal={props.toggleModal}
+      selectPhoto={props.selectPhoto}
        />
     </div>
   );
