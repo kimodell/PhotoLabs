@@ -13,7 +13,9 @@ const PhotoList = (props) => {
     key={photo.id} 
     photo={photo}
     liked={likedPhotos.includes(photo.id)} 
-    toggleLike={() => toggleLike(photo.id)} 
+    toggleLike={() => toggleLike(photo.id)}
+    modalOpen={props.modalOpen}
+    setModalOpen={props.setModalOpen} 
     />
     )
 
