@@ -6,11 +6,7 @@ import PhotoFavButton from "./PhotoFavButton";
 //Component to display a single photo
 const PhotoListItem = (props) => {
 
-  const { photo, liked, toggleLike } = props;
-
-  const toggleModal = () => {
-    props.setModalOpen(prevState => !prevState);
-  };
+  const { photo, liked, toggleLike, toggleModal } = props;
 
   return (
     <li className="photo-list__item" key={photo.id}>
