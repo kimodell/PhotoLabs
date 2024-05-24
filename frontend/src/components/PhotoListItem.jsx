@@ -11,7 +11,7 @@ const PhotoListItem = (props) => {
   return (
     <li className="photo-list__item" key={photo.id}>
       <PhotoFavButton liked={liked} toggleLike={toggleLike} />
-      <img className="photo-list__image" src={photo.urls.regular} onClick={toggleModal}></img>
+      <img className="photo-list__image" src={photo.urls.regular} onClick={() => toggleModal(photo.id, photo.urls.full)}></img>
       <div className="photo-list__user-details">
         <img className="photo-list__user-profile" src={photo.user.profile}></img>
         <div className="photo-list__user-info">
