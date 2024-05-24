@@ -12,13 +12,18 @@ const App = () => {
   //Use sate to open or close modal, display modal if modalOpen is true
   const [modalOpen, setModalOpen] = useState(false);
 
+  const toggleModal = () => {
+    setModalOpen(prevState => !prevState);
+  };
+
   return (
     <div className="App">
     <HomeRoute topics={topics} 
     photos={photos} 
     modalOpen={modalOpen} 
-    setModalOpen={setModalOpen}/>
-    {modalOpen && <PhotoDetailsModal/>}
+    setModalOpen={setModalOpen}
+    toggleModal={toggleModal}/>
+    {modalOpen && <PhotoDetailsModal modalOpen={modalOpen} toggleModal={toggleModal}/>}
   </div>
   );
 };
