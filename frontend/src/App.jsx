@@ -23,7 +23,7 @@ const App = () => {
     modalOpen={modalOpen} 
     setModalOpen={setModalOpen}
     toggleModal={toggleModal}/>
-    {modalOpen && <PhotoDetailsModal modalOpen={modalOpen} toggleModal={toggleModal}/>}
+    {modalOpen && <PhotoDetailsModal modalOpen={modalOpen} toggleModal={toggleModal} photos={photos}/>}
   </div>
   );
 };
