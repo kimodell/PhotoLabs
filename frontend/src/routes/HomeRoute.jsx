@@ -24,7 +24,12 @@ const HomeRoute = (props) => {
   return (
     <div className="home-route">
       <TopNavigation topics={props.topics} likedPhotos={likedPhotos} />
-      <PhotoList photos={props.photos} likedPhotos={likedPhotos} toggleLike={toggleLike} />
+      <PhotoList photos={props.photos} 
+      likedPhotos={likedPhotos} 
+      toggleLike={toggleLike}
+      modalOpen = {props.modalOpen}
+      setModalOpen= {props.setModalOpen}
+       />
     </div>
   );
 };
