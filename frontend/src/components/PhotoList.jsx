@@ -6,22 +6,22 @@ import PhotoListItem from "./PhotoListItem";
 //Component to display grid of photos
 const PhotoList = (props) => {
 
-  const { likedPhotos, toggleLike, modalOpen, setModalOpen, toggleModal, selectPhoto} = props
+  const { likedPhotos, toggleLike, modalOpen, setModalOpen, toggleModal, selectPhoto } = props;
 
-  const parsedPhotos = props.photos.map((photo) => 
-    <PhotoListItem 
-    key={photo.id} 
-    photo={photo}
-    liked={likedPhotos.includes(photo.id)} 
-    toggleLike={() => toggleLike(photo.id)}
-    modalOpen={modalOpen}
-    setModalOpen={setModalOpen}
-    toggleModal={toggleModal}
-    selectPhoto={selectPhoto} 
+  const parsedPhotos = props.photos.map((photo) =>
+    <PhotoListItem
+      key={photo.id}
+      photo={photo}
+      liked={likedPhotos.includes(photo.id)}
+      toggleLike={() => toggleLike(photo.id)}
+      modalOpen={modalOpen}
+      setModalOpen={setModalOpen}
+      toggleModal={toggleModal}
+      selectPhoto={selectPhoto}
     />
-    )
+  );
 
-    
+
   return (
     <ul className="photo-list">
       {parsedPhotos}
