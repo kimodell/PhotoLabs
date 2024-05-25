@@ -14,7 +14,6 @@ const HomeRoute = (props) => {
       likedPhotos={props.likedPhotos} 
       toggleLike={props.toggleLike}
       modalOpen = {props.modalOpen}
-      setModalOpen= {props.setModalOpen}
       toggleModal={props.toggleModal}
       selectPhoto={props.selectPhoto}
        />

@@ -4,17 +4,15 @@ import "../styles/PhotoList.scss";
 import PhotoListItem from "./PhotoListItem";
 
 //Component to display grid of photos
-const PhotoList = (props) => {
-
-  const { likedPhotos, toggleLike, setModalOpen, toggleModal, selectPhoto } = props;
-
-  const parsedPhotos = props.photos.map((photo) =>
+const PhotoList = ({photos,likedPhotos, toggleLike, toggleModal, selectPhoto}) => {
+// /TODO fix the photos props. Make it all consistent
+  const parsedPhotos = photos.map((photo) =>
     <PhotoListItem
       key={photo.id}
+      photoId={photo.id}
       photo={photo}
-      liked={likedPhotos.includes(photo.id)}
-      toggleLike={() => toggleLike(photo.id)}
-      setModalOpen={setModalOpen}
+      likedPhotos={likedPhotos}
+      toggleLike={toggleLike}
       toggleModal={toggleModal}
       selectPhoto={selectPhoto}
     />

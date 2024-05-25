@@ -11,10 +11,6 @@ const PhotoDetailsModal = (props) => {
 
   const { toggleModal, selectPhoto, likedPhotos, toggleLike } = props;
 
-  const { urls, user, location, similar_photos } = selectPhoto.photo;
-
-  const similarPhotos = Object.values((similar_photos));
-
 
   return (
     <div className="photo-details-modal">
@@ -23,19 +19,19 @@ const PhotoDetailsModal = (props) => {
       </button>
       <div>
         <div className="photo-details-modal__fav-icon">
-        <PhotoFavButton toggleFavourite={toggleLike} photoId={selectPhoto.photo.id} favourites={likedPhotos} />
+        <PhotoFavButton toggleLike={toggleLike} photoId={selectPhoto.id} likedPhotos={likedPhotos} />
         </div>
         <div className="photo-details-modal__image-container">
-        <img className="photo-details-modal__image" src={urls.full} ></img>
+        <img className="photo-details-modal__image" src={selectPhoto.urls.full} ></img>
         </div>
         <div className="photo-details-modal__top-bar">
-          <img className="photo-details-modal__photographer-profile" src={user.profile}></img>
+          <img className="photo-details-modal__photographer-profile" src={selectPhoto.user.profile}></img>
             <div className="photo-details-modal__photographer-info">
-              <span>{user.name}</span>
+              <span>{selectPhoto.user.name}</span>
               <div className="photo-details-modal__photographer-location">
-                <span>{location.city}</span>
+                <span>{selectPhoto.location.city}</span>
                 <>, </>
-                <span>{location.country}</span>
+                <span>{selectPhoto.location.country}</span>
             </div>
           </div>
         </div>
@@ -48,7 +44,7 @@ const PhotoDetailsModal = (props) => {
       </div>
       <div className="photo-details-modal__images">
         <PhotoList
-          photos={similarPhotos}
+          photos={Object.values(selectPhoto.similar_photos)}
           likedPhotos={likedPhotos}
           toggleLike={toggleLike}
         />
