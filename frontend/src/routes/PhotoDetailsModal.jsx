@@ -18,9 +18,7 @@ const PhotoDetailsModal = ({toggleModal, selectPhoto, likedPhotos, toggleLike}) 
         <div className="photo-details-modal__fav-icon">
         <PhotoFavButton toggleLike={toggleLike} photoId={selectPhoto.id} likedPhotos={likedPhotos} />
         </div>
-        <div className="photo-details-modal__image-container">
         <img className="photo-details-modal__image" src={selectPhoto.urls.full} ></img>
-        </div>
         <div className="photo-details-modal__top-bar">
           <img className="photo-details-modal__photographer-profile" src={selectPhoto.user.profile}></img>
             <div className="photo-details-modal__photographer-info">
