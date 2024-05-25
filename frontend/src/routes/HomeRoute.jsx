@@ -5,17 +5,17 @@ import TopNavigation from 'components/TopNavigationBar';
 import PhotoList from 'components/PhotoList';
 
 //Homepage route to view photos and nav bar from homepage
-const HomeRoute = (props) => {
+const HomeRoute = ({topics, photos, likedPhotos, toggleLike, modalOpen, toggleModal, selectPhoto}) => {
 
   return (
     <div className="home-route">
-      <TopNavigation topics={props.topics} likedPhotos={props.likedPhotos} />
-      <PhotoList photos={props.photos} 
-      likedPhotos={props.likedPhotos} 
-      toggleLike={props.toggleLike}
-      modalOpen = {props.modalOpen}
-      toggleModal={props.toggleModal}
-      selectPhoto={props.selectPhoto}
+      <TopNavigation topics={topics} likedPhotos={likedPhotos} />
+      <PhotoList photos={photos} 
+      likedPhotos={likedPhotos} 
+      toggleLike={toggleLike}
+      modalOpen = {modalOpen}
+      toggleModal={toggleModal}
+      selectPhoto={selectPhoto}
        />
     </div>
   );

@@ -7,10 +7,7 @@ import PhotoFavButton from 'components/PhotoFavButton';
 
 //component to render modal when specified photo is clicked
 
-const PhotoDetailsModal = (props) => {
-
-  const { toggleModal, selectPhoto, likedPhotos, toggleLike } = props;
-
+const PhotoDetailsModal = ({toggleModal, selectPhoto, likedPhotos, toggleLike}) => {
 
   return (
     <div className="photo-details-modal">

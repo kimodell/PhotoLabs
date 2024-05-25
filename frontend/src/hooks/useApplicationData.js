@@ -17,13 +17,11 @@ const useApplicationData = () => {
     
     }));
 
-
     setState(prevState => ({
       ...prevState,
       selectPhoto: selectedPhoto,
     }));
   };
-
 
     //Function to check if photoID is already present in likedPhotos state, if not, add the photoID
   const toggleLike = function(photoId) {

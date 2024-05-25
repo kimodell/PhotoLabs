@@ -5,16 +5,14 @@ import TopicList from './TopicList';
 import FavBadge from './FavBadge';
 
 //Component to display top nav bar with logo, topics and fave icon
-const TopNavigation = (props) => {
-
-  const { likedPhotos } = props;
+const TopNavigation = ({likedPhotos, topics}) => {
 
   const isFavPhotoExist = likedPhotos.length !== 0;
 
   return (
     <div className="top-nav-bar">
       <span className="top-nav-bar__logo">PhotoLabs</span>
-      <TopicList topics={props.topics} />
+      <TopicList topics={topics} />
       <FavBadge isFavPhotoExist={isFavPhotoExist} selected={true} />
     </div>
   );
