@@ -9,7 +9,7 @@ import PhotoFavButton from 'components/PhotoFavButton';
 
 const PhotoDetailsModal = (props) => {
 
-  const { toggleModal, selectPhoto, likedPhotos, toggleLike, modalOpen } = props;
+  const { toggleModal, selectPhoto, likedPhotos, toggleLike } = props;
 
   const { urls, user, location, similar_photos } = selectPhoto.photo;
 
@@ -22,7 +22,7 @@ const PhotoDetailsModal = (props) => {
         <img src={closeSymbol} alt="close symbol" />
       </button>
       <div>
-      <PhotoFavButton />
+      <PhotoFavButton toggleFavourite={toggleLike} photoId={selectPhoto.photo.id} favourites={likedPhotos} />
       <img className="photo-details-modal__image" src={urls.full} ></img>
       <div className="photo-details-modal__header">
         <img className="photo-details-modal__photographer-profile" src={user.profile}></img>
@@ -39,7 +39,8 @@ const PhotoDetailsModal = (props) => {
       <div className="photo-details-modal__header">
         <h2>Similar Photos</h2>
       </div>
-      <PhotoList photos={similarPhotos}
+      <PhotoList 
+      photos={similarPhotos}
       likedPhotos={likedPhotos}
       toggleLike={toggleLike}
       />
