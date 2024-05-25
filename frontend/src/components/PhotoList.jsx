@@ -5,7 +5,7 @@ import PhotoListItem from "./PhotoListItem";
 
 //Component to display grid of photos
 const PhotoList = ({photos,likedPhotos, toggleLike, toggleModal, selectPhoto}) => {
-// /TODO fix the photos props. Make it all consistent
+
   const parsedPhotos = photos.map((photo) =>
     <PhotoListItem
       key={photo.id}

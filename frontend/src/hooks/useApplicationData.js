@@ -22,19 +22,6 @@ const useApplicationData = () => {
       ...prevState,
       selectPhoto: selectedPhoto,
     }));
-
-    // let updatedSelectPhoto = {};
-
-    // for (const photo of photos) {
-    //   if (photo.id === photoID) {
-    //     updatedSelectPhoto = { photo };
-    //     // setSelectPhoto(updatedSelectPhoto);
-    //     setState(prevState => ({
-    //       ...prevState,
-    //       selectPhoto: updatedSelectPhoto,
-    //     }));
-    //   };
-    // }
   };
 
 
@@ -57,23 +44,6 @@ const useApplicationData = () => {
     })
     )
 
-    // if (state.likedPhotos.includes(photoId)) {
-    //   const updatedLikedPhotos = state.likedPhotos.filter(id => id !== photoId);
-
-    //   setState(prevState => ({
-    //     ...prevState,
-    //     likedPhotos: updatedLikedPhotos,
-    //   })
-    //   )
-    // } else {
-    //   const updatedLikedPhotos = [...likedPhotos, photoId];
-    //   setState(prevState => ({
-    //     ...prevState,
-    //     likedPhotos: updatedLikedPhotos,
-    //   })
-    //   )
-    // }
-  
   };
 
   return {state, toggleModal, toggleLike}
