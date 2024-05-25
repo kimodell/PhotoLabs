@@ -13,26 +13,55 @@ const App = () => {
   const [modalOpen, setModalOpen] = useState(false);
 
   //Use state to pass selected photo details to modal
-  const [selectPhoto, setSelectPhoto] = useState([]);
+  const [selectPhoto, setSelectPhoto] = useState({});
 
   //Change state of selected photo for modal based on modal toggle
-  const toggleModal = (photoID, photoUrl) => {
+  const toggleModal = (photoID) => {
     setModalOpen(prevState => !prevState);
 
-    const updatedSelectPhoto = [photoID, photoUrl];
-    setSelectPhoto(updatedSelectPhoto);
+    let updatedSelectPhoto = {};
+
+    for (const photo of photos) {
+      if (photo.id === photoID) {
+        updatedSelectPhoto = { photo };
+        setSelectPhoto(updatedSelectPhoto);
+      };
+    }
   };
+
+  const [likedPhotos, setLikedPhotos] = useState([]);
+
+  //Function to check if photoID is already present in likedPhotos state, if not, add the photoID
+  const toggleLike = function(photoId) {
+    if (likedPhotos.includes(photoId)) {
+      const updatedLikedPhotos = likedPhotos.filter(id => id !== photoId);
+      setLikedPhotos(updatedLikedPhotos);
+    } else {
+      const updatedLikedPhotos = [...likedPhotos, photoId];
+      setLikedPhotos(updatedLikedPhotos);
+    }
+  };
+
 
   return (
     <div className="App">
-    <HomeRoute topics={topics} 
-    photos={photos} 
-    modalOpen={modalOpen} 
-    setModalOpen={setModalOpen}
-    toggleModal={toggleModal}
-    selectPhoto={selectPhoto}/>
-    {modalOpen && <PhotoDetailsModal modalOpen={modalOpen} toggleModal={toggleModal} selectPhoto={selectPhoto}/>}
-  </div>
+      <HomeRoute topics={topics}
+        photos={photos}
+        modalOpen={modalOpen}
+        setModalOpen={setModalOpen}
+        toggleModal={toggleModal}
+        selectPhoto={selectPhoto}
+        toggleLike={toggleLike} 
+        likedPhotos={likedPhotos}  />
+      {modalOpen &&
+        <PhotoDetailsModal
+          modalOpen={modalOpen}
+          toggleModal={toggleModal}
+          selectPhoto={selectPhoto}
+          toggleLike={toggleLike}
+          likedPhotos={likedPhotos}
+        />}
+    </div>
   );
 };
 
