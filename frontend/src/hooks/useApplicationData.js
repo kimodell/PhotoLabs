@@ -20,6 +20,9 @@ const useApplicationData = () => {
       case 'SET_TOPIC_DATA':
         return { ...state, topicData: action.payload };
 
+      case 'SET_PHOTOS_BY_TOPIC':
+        return { ...state, photoData: action.payload };
+
       //Change state of selected photo for modal based on modal toggle
       case 'TOGGLE_MODAL':
         return {
@@ -72,7 +75,15 @@ const useApplicationData = () => {
     dispatch({ type: 'TOGGLE_LIKE', payload: photoId });
   };
 
-  return { state, toggleModal, toggleLike };
+  const fetchPhotosByTopic = (topicId) => {
+    fetch(`/api/topics/photos/${topicId}`)
+      .then((response) => response.json())
+      .then((data) => dispatch({ type: 'SET_PHOTOS_BY_TOPIC', payload: data }))
+      .catch((error) => console.error(`Fetching photos for topic ${topicId} failed:`, error));
+  };
+
+  return { state, toggleModal, toggleLike, fetchPhotosByTopic };
+  
 };
 
 

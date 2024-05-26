@@ -5,18 +5,19 @@ import TopicListItem from "./TopicListItem";
 
 
 //Component to display lsit of topics
-const TopicList = (props) => {
-  
-  const parsedTopic = props.topics.map((topic) =>
+const TopicList = ({ topics, handleTopicClick }) => {
+
+  const parsedTopics = topics.map((topic) => (
     <TopicListItem
     key={topic.id}
     label={topic.title}
-    />
-    )
+    onClick={() => handleTopicClick(topic.id)} // Add onClick event handler
+  />
+  ));
 
   return (
     <div className="top-nav-bar__topic-list">
-      {parsedTopic}
+      {parsedTopics}
     </div>
   );
 };

@@ -8,7 +8,7 @@ import PhotoDetailsModal from 'routes/PhotoDetailsModal';
 import useApplicationData from 'hooks/useApplicationData';
 // Note: Rendering a single component to build components in isolation
 const App = () => {
-  const { state, toggleModal, toggleLike  } = useApplicationData();
+  const { state, toggleModal, toggleLike, fetchPhotosByTopic } = useApplicationData();
 
   return (
     <div className="App">
@@ -19,6 +19,7 @@ const App = () => {
         selectPhoto={state.selectPhoto}
         toggleLike={toggleLike} 
         likedPhotos={state.likedPhotos} 
+        fetchPhotosByTopic={fetchPhotosByTopic}
        />
       {state.modalOpen &&
         <PhotoDetailsModal
