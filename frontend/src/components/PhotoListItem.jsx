@@ -4,7 +4,7 @@ import "../styles/PhotoListItem.scss";
 import PhotoFavButton from "./PhotoFavButton";
 
 //Component to display a single photo
-const PhotoListItem = ({photo, likedPhotos, toggleLike, toggleModal, selectPhoto, photoId}) => {
+const PhotoListItem = ({ photo, likedPhotos, toggleLike, toggleModal, selectPhoto, photoId }) => {
 
 
   return (

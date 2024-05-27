@@ -17,10 +17,10 @@ const App = () => {
         modalOpen={state.modalOpen}
         toggleModal={toggleModal}
         selectPhoto={state.selectPhoto}
-        toggleLike={toggleLike} 
-        likedPhotos={state.likedPhotos} 
+        toggleLike={toggleLike}
+        likedPhotos={state.likedPhotos}
         fetchPhotosByTopic={fetchPhotosByTopic}
-       />
+      />
       {state.modalOpen &&
         <PhotoDetailsModal
           modalOpen={state.modalOpen}

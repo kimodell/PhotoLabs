@@ -2,7 +2,7 @@ import React from "react";
 
 import "../styles/TopicListItem.scss";
 
-//component to display topic item
+//Component to display topic item
 const TopicListItem = ({ label, onClick }) => {
 
   return (

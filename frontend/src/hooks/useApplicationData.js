@@ -11,7 +11,7 @@ const useApplicationData = () => {
     topicData: []
   };
 
-  //reducer function to manage state
+  //Reducer function to manage state
   const reducer = (state, action) => {
     switch (action.type) {
       //Change state of photo and topic data
@@ -20,6 +20,7 @@ const useApplicationData = () => {
       case 'SET_TOPIC_DATA':
         return { ...state, topicData: action.payload };
 
+      //Change state of to filter photos based on topic selected
       case 'SET_PHOTOS_BY_TOPIC':
         return { ...state, photoData: action.payload };
 
@@ -31,7 +32,7 @@ const useApplicationData = () => {
           selectPhoto: action.payload,
         };
 
-      // Check if photoID is already present in likedPhotos state, if not, add the photoID 
+      //Check if photoID is already present in likedPhotos state, if not, add the photoID 
       case 'TOGGLE_LIKE':
         const isLiked = state.likedPhotos.includes(action.payload);
         return {
@@ -46,7 +47,7 @@ const useApplicationData = () => {
     }
   };
 
-  //hook to use reducer function to manage state
+  //Hook to use reducer function to manage state
   const [state, dispatch] = useReducer(reducer, initialState);
 
   //GET request to pull photo data from api server
@@ -65,16 +66,17 @@ const useApplicationData = () => {
       .catch((error) => console.error("Fetching topics failed:", error));
   }, []);
 
-  // use reducer function to toggle modal and set slected photo
+  //Use reducer function to toggle modal and set slected photo
   const toggleModal = (selectedPhoto) => {
     dispatch({ type: 'TOGGLE_MODAL', payload: selectedPhoto });
   };
 
-  // Use reducer function to toggle like state
+  //Use reducer function to toggle like state
   const toggleLike = (photoId) => {
     dispatch({ type: 'TOGGLE_LIKE', payload: photoId });
   };
 
+  //Use reducer function to filter photos by topic selected in nav bar
   const fetchPhotosByTopic = (topicId) => {
     fetch(`/api/topics/photos/${topicId}`)
       .then((response) => response.json())
@@ -83,7 +85,7 @@ const useApplicationData = () => {
   };
 
   return { state, toggleModal, toggleLike, fetchPhotosByTopic };
-  
+
 };
 
 

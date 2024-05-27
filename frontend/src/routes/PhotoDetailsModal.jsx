@@ -5,9 +5,9 @@ import closeSymbol from '../assets/closeSymbol.svg';
 import PhotoList from 'components/PhotoList';
 import PhotoFavButton from 'components/PhotoFavButton';
 
-//component to render modal when specified photo is clicked
+//Component to render modal when specified photo is clicked
 
-const PhotoDetailsModal = ({toggleModal, selectPhoto, likedPhotos, toggleLike}) => {
+const PhotoDetailsModal = ({ toggleModal, selectPhoto, likedPhotos, toggleLike }) => {
 
   return (
     <div className="photo-details-modal">
@@ -16,17 +16,17 @@ const PhotoDetailsModal = ({toggleModal, selectPhoto, likedPhotos, toggleLike}) 
       </button>
       <div>
         <div className="photo-details-modal__fav-icon">
-        <PhotoFavButton toggleLike={toggleLike} photoId={selectPhoto.id} likedPhotos={likedPhotos} />
+          <PhotoFavButton toggleLike={toggleLike} photoId={selectPhoto.id} likedPhotos={likedPhotos} />
         </div>
         <img className="photo-details-modal__image" src={selectPhoto.urls.full} ></img>
         <div className="photo-details-modal__top-bar">
           <img className="photo-details-modal__photographer-profile" src={selectPhoto.user.profile}></img>
-            <div className="photo-details-modal__photographer-info">
-              <span>{selectPhoto.user.name}</span>
-              <div className="photo-details-modal__photographer-location">
-                <span>{selectPhoto.location.city}</span>
-                <>, </>
-                <span>{selectPhoto.location.country}</span>
+          <div className="photo-details-modal__photographer-info">
+            <span>{selectPhoto.user.name}</span>
+            <div className="photo-details-modal__photographer-location">
+              <span>{selectPhoto.location.city}</span>
+              <>, </>
+              <span>{selectPhoto.location.country}</span>
             </div>
           </div>
         </div>

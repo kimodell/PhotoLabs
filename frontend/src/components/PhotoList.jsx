@@ -4,7 +4,7 @@ import "../styles/PhotoList.scss";
 import PhotoListItem from "./PhotoListItem";
 
 //Component to display grid of photos
-const PhotoList = ({photos, likedPhotos, toggleLike, toggleModal, selectPhoto}) => {
+const PhotoList = ({ photos, likedPhotos, toggleLike, toggleModal, selectPhoto }) => {
 
   const parsedPhotos = photos.map((photo) =>
     <PhotoListItem
