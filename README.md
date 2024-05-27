@@ -30,12 +30,21 @@ npm start
 
 Read `backend/readme` for further setup details.
 
-1. Start the backend server by running the following command in your terminal:
+1. Start the backend server by navigating to the `/backend` directory in your terminal and running the following command:
 
 ```sh
 cd backend
 npm start
 ```
+2. Access the application by entering `http://localhost:8001` into your browser.
+
 **Note:** Ensure you are running both the frontend and backend servers!
 
 ## Final Product
+![Main page](https://github.com/kimodell/PhotoLabs/blob/main/docs/main-page.png)
+![Filter by topic "animals"](https://github.com/kimodell/PhotoLabs/blob/main/docs/filter-by-topic.png)
+![DisLay modal](https://github.com/kimodell/PhotoLabs/blob/main/docs/modal-main.png)
+![Similar photos in modal](https://github.com/kimodell/PhotoLabs/blob/main/docs/modal-similar-photos.png)
+
+## Honorable Mentions
+I would like to send out a huge thank you to my friends and mentors at Lighthouse Labs. Thank you for encouraging and supporting me!
