@@ -6,11 +6,11 @@ In PhotoLabs, users are welcome to browse all photos in the collection, or filte
 PhotoLabs was created as a React based project for the web development program at [Lighthouse Labs](https://github.com/lighthouse-labs).
 
 ## Features
-..***View All Photos:** Browse through a collection of photos on the main page.
-..***Filter by Category:** Easily filter photos by specific categories found in the top navigation bar.
-..***Like Photos:** Show appreciation for your favorite photos by liking them directly on the main page or within the photo modal.
-..***Photo Modal:** Click on any photo to view it in a larger format, providing a more detailed view. The modal also displays similar photos below the selected photo.
-..***Favorites Notification:** Keep track of your liked photos with a notification badge on the favorites icon in the navigation bar, updating in real-time as you like photos.
+-**View All Photos:** Browse through a collection of photos on the main page.
+-**Filter by Category:** Easily filter photos by specific categories found in the top navigation bar.
+-**Like Photos:** Show appreciation for your favorite photos by liking them directly on the main page or within the photo modal.
+-**Photo Modal:** Click on any photo to view it in a larger format, providing a more detailed view. The modal also displays similar photos below the selected photo.
+-**Favorites Notification:** Keep track of your liked photos with a notification badge on the favorites icon in the navigation bar, updating in real-time as you like photos.
 
 ## Setup
 
