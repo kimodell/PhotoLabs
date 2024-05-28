@@ -1,4 +1,4 @@
-# PhotoLabs
+# PhotoLabs  :camera_flash:
 Welcome to PhotoLabs! A dynamic, user-friendly, single-page application designed for photo enthusiasts to explore a collection of images, filter the images by topic, and curate their favorite images. PhotoLabs offers a streamlined interface, providing users with a seamless and engaging experience with a variety of features aimed at enhancing photo viewing and management.
 
 In PhotoLabs, users are welcome to browse all photos in the collection, or filter by the pre-set catagories, to find and like their favorites!
