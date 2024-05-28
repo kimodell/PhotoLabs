@@ -10,6 +10,7 @@ const HomeRoute = ({ topics, photos, likedPhotos, toggleLike, modalOpen, toggleM
   return (
     <div className="home-route">
       <TopNavigation topics={topics} likedPhotos={likedPhotos} fetchPhotosByTopic={fetchPhotosByTopic} />
+      <div className="home-route__photolist">
       <PhotoList photos={photos}
         likedPhotos={likedPhotos}
         toggleLike={toggleLike}
@@ -17,6 +18,7 @@ const HomeRoute = ({ topics, photos, likedPhotos, toggleLike, modalOpen, toggleM
         toggleModal={toggleModal}
         selectPhoto={selectPhoto}
       />
+      </div>
     </div>
   );
 };

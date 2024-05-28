@@ -1,26 +1,29 @@
+.photo-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
 .photo-list__item {
   margin: 24px;
   padding: 8px;
-  border-width: 0.5px;
-  border-color: lightgray;
-  border-style: solid;
+  border: 1px #E6E6E6 solid;
   border-radius: 8px;
   max-width: fit-content;
   list-style: none;
-}
-
-.photo-list__image {
-  user-select: none;
-  width: 300px;
-  height: 200px;
-  object-fit: cover;
+  background-color: #FFFFFF;
 }
 
 .photo-list__image {
   border-radius: 8px 8px 0px 0px;
   user-select: none;
   width: 300px;
-  height: 200px;
+  height: 200px;  
   object-fit: cover;
 }
 
