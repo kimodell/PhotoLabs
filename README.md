@@ -17,13 +17,13 @@ PhotoLabs was created as a React based project for the web development program a
 -**Favorites Notification:** Keep track of your liked photos with a notification badge on the favorites icon in the navigation bar, updating in real-time as you like photos.
 
 ## Dependencies
--React
--JSX
--Babel
--Express
--Webpack
--SCSS
--Postgres
+*React
+*JSX
+*Babel
+*Express
+*Webpack
+*SCSS
+*Postgres
 
 ## Setup
 
